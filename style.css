@@ -1,0 +1,363 @@
+/* ==============================
+   SpendWise Theme Variables
+   ============================== */
+
+:root {
+    --brand-color: #2563eb;
+    --accent-color: #10b981;
+    --surface-color: #ffffff;
+    --background-color: #f4f7fb;
+    --primary-text: #1f2937;
+    --secondary-text: #6b7280;
+    --border-color: #e5e7eb;
+    --sidebar-color: #111827;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   General Styling
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   Main Dashboard Grid
+   ============================== */
+
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+}
+
+
+/* ==============================
+   Sidebar
+   ============================== */
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.logo p {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+
+/* ==============================
+   Main Content
+   ============================== */
+
+.main-content {
+    padding: 30px;
+    min-width: 0;
+}
+
+
+/* ==============================
+   Header - Flexbox
+   ============================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.header-text h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    color: var(--secondary-text);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--brand-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile span {
+    display: block;
+    color: var(--secondary-text);
+    font-size: 13px;
+}
+
+
+/* ==============================
+   Summary Boxes - Grid
+   ============================== */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.summary-box {
+    background-color: var(--surface-color);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.summary-box span {
+    color: var(--secondary-text);
+    font-size: 14px;
+}
+
+.summary-box h2 {
+    margin-top: 8px;
+    font-size: 25px;
+}
+
+
+/* ==============================
+   Category Section
+   ============================== */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin-bottom: 3px;
+}
+
+.section-heading p {
+    color: var(--secondary-text);
+}
+
+
+/* ==============================
+   Category Cards - CSS Grid
+   ============================== */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* ==============================
+   Category Card - Flexbox
+   ============================== */
+
+.category-card {
+    background-color: var(--surface-color);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Hover Micro-interaction */
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Keyboard Focus Micro-interaction */
+
+.category-card:focus {
+    outline: 3px solid var(--brand-color);
+    outline-offset: 3px;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   Card Content
+   ============================== */
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #eff6ff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.percentage {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.card-content p {
+    color: var(--secondary-text);
+    font-size: 14px;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.amount strong {
+    font-size: 18px;
+}
+
+.amount span {
+    color: var(--secondary-text);
+    font-size: 13px;
+}
+
+
+/* ==============================
+   Responsive Design
+   Below 768px
+   ============================== */
+
+@media (max-width: 767px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        flex: 1;
+        text-align: center;
+        min-width: 100px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==============================
+   Dark Theme Stretch Goal
+   ============================== */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --surface-color: #1f2937;
+        --background-color: #111827;
+        --primary-text: #f9fafb;
+        --secondary-text: #9ca3af;
+        --border-color: #374151;
+    }
+}
