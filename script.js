@@ -1,36 +1,42 @@
-// SpendWise JavaScript Foundation
+Make SpendWise Interactive
 
-// 1. Store application data
-let budget = 50000;
-let expenses = 15000;
+During this week, you learned how JavaScript can make decisions, work with collections of data, update webpages, and respond to user actions.
 
-// 2. Calculate remaining balance
-function calculateBalance(budget, expenses) {
-    return budget - expenses;
-}
+Your task is to continue building your existing SpendWise project by implementing these concepts to create a more interactive budgeting application.
 
-// 3. Collect user input
-let userBudget = prompt("Enter your monthly budget:");
-let userExpenses = prompt("Enter your total expenses:");
+Requirements
+1. Implement Decision Making
 
-// Convert user input from text to numbers
-userBudget = Number(userBudget);
-userExpenses = Number(userExpenses);
+Use conditional statements to evaluate budgeting scenarios and provide appropriate feedback based on user data.
 
-// 4. Perform budget calculation
-let remainingBalance = calculateBalance(userBudget, userExpenses);
+2. Work with Multiple Records
 
-// 5. Display results in the console
-console.log("===== SpendWise Budget Summary =====");
-console.log("Budget: KES " + userBudget);
-console.log("Expenses: KES " + userExpenses);
-console.log("Remaining Balance: KES " + remainingBalance);
+Use arrays to store and manage expense information rather than relying on individual variables.
 
-// Display the result based on the balance
-if (remainingBalance > 0) {
-    console.log("Status: You are within your budget.");
-} else if (remainingBalance === 0) {
-    console.log("Status: Your budget has been fully used.");
-} else {
-    console.log("Status: You have exceeded your budget.");
-}
+3. Process Data with Loops
+
+Use loops to work through stored expense records and display or process information efficiently.
+
+4. Update the Dashboard Dynamically
+
+Use DOM Manipulation to display information directly on the webpage rather than only in the browser console.
+
+5. Handle User Interactions
+
+Use event listeners to allow users to interact with your application through buttons and forms.
+
+6. Connect Everything Together
+
+Your application should demonstrate how user actions trigger JavaScript logic, update data, and display results on the page.
+
+Expected Deliverable
+
+By the end of this assignment, your SpendWise application should:
+
+Make decisions using conditional statements.
+Store multiple expense records using arrays.
+Process records using loops.
+Update dashboard content dynamically.
+Respond to user interactions.
+Display information directly on the webpage.
+Demonstrate a clear flow between user actions and application updates.
